@@ -1,0 +1,15 @@
+[Unit]
+Description=Dora Exporter
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/script/main.py
+WorkingDirectory=/path/to/script/dora-exporter
+StandardOutput=journal
+StandardError=journal
+Restart=always
+RestartSec=5
+User=your_user_name
+
+[Install]
+WantedBy=multi-user.target
